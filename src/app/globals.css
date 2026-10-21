@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF7F2;
+  --bg-cream-alt: #F4F1EA;
+  --bg-paper: #FFFFFF;
+  --ink-black: #121316;
+  --ink-muted: #5A5D64;
+  --border-technical: rgba(18, 19, 22, 0.22);
+  --border-technical-strong: rgba(18, 19, 22, 0.45);
+  
+  /* Studio Swatches */
+  --studio-tangerine: #FF5A1F;
+  --studio-magenta: #EC4899;
+  --studio-cobalt: #2563EB;
+  --studio-canary: #FACC15;
+  --studio-emerald: #10B981;
+  --studio-purple: #8B5CF6;
+  
+  --active-accent: #FF5A1F;
+
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, "Courier New", monospace;
+  --font-display: "Syne", "Cabinet Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-cream: var(--bg-cream);
+  --color-cream-alt: var(--bg-cream-alt);
+  --color-paper: var(--bg-paper);
+  --color-ink: var(--ink-black);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--active-accent);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-cream);
+  color: var(--ink-black);
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--ink-black);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(rgba(18, 19, 22, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(18, 19, 22, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Technical 1px Broken Grid Architecture */
+.dau-card {
+  position: relative;
+  background-color: #FAF7F2;
+  border: 1px solid rgba(18, 19, 22, 0.28);
+  box-shadow: 3px 3px 0px rgba(18, 19, 22, 0.12);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.dau-card:hover {
+  border-color: rgba(18, 19, 22, 0.6);
+  box-shadow: 5px 5px 0px rgba(18, 19, 22, 0.2);
+}
+
+.dau-card-dark {
+  position: relative;
+  background-color: #121316;
+  color: #FAF7F2;
+  border: 1px solid rgba(250, 247, 242, 0.25);
+  box-shadow: 4px 4px 0px rgba(18, 19, 22, 0.35);
+}
+
+.dau-fig-badge {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  padding: 1px 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(18, 19, 22, 0.35);
+  background: #FAF7F2;
+  color: #121316;
+  z-index: 10;
+}
+
+.dau-fig-badge-dark {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  padding: 1px 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(250, 247, 242, 0.4);
+  background: #121316;
+  color: #FAF7F2;
+  z-index: 10;
+}
+
+.dau-coord-header {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5A5D64;
+  border-bottom: 1px dashed rgba(18, 19, 22, 0.2);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Studio grid guides toggleable */
+.studio-grid-guides {
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(18, 19, 22, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 19, 22, 0.5);
+}

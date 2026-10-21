@@ -1,0 +1,26 @@
+{
+  "name": "JOHIA CREATIVES",
+  "short_name": "Creatives",
+  "description": "The official JOHIA Creatives web experience for Jesus Our Hope International Assemblies - Cubao.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#FF5A1F",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
